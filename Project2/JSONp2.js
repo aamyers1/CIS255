@@ -1,0 +1,26 @@
+var CISCourses = [
+
+{"prefix":"MATH","courseNumber": "103"},
+{"prefix":"CS","courseNumber":"105"},
+{"prefix":"CS","courseNumber":"146"},
+{"prefix":"CS","courseNumber":"116"},
+{"prefix":"MATH","courseNumber":"120B"},
+{"prefix":"CS","courseNumber":"245"},
+{"prefix":"CIS","courseNumber":"255"},
+{"prefix":"CS","courseNumber":"216"},
+{"prefix":"CIS","courseNumber":"301"},
+{"prefix":"CIS","courseNumber":"366"},
+{"prefix":"CIS","courseNumber":"355"},
+{"prefix":"CIS","courseNumber":"311"},
+{"prefix":"CIS","courseNumber":"333"},
+{"prefix":"CIS","courseNumber":"386"},
+{"prefix":"CIS","courseNumber":"422"},
+{"prefix":"CIS","courseNumber":"424"},
+{"prefix":"CS","courseNumber" :"333"},
+{"prefix":"CS","courseNumber":"345"},
+{"prefix":"CIS","courseNumber":"357"},
+{"prefix":"CIS","courseNumber":"371"},
+{"prefix":"CIS","courseNumber":"425"},
+{"prefix":"CIS","courseNumber":"486"},
+{"prefix":"CIS","courseNumber":"490"}
+];

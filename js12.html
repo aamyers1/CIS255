@@ -1,0 +1,99 @@
+<DOCTYPE!html>
+<html>
+	<head>
+		<head>
+		<style>
+			#container {
+			width: 400px;
+			height: 400px;
+			position: relative;
+			background: yellow;
+			}
+			#animate {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				bottom:0;
+				left:0;
+				
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="out1">aaaaa</p>
+		<p>
+			<button onclick="myMove()">Click Me</button>
+		</p>
+		<div id ="container">
+			<div id ="animate">Yeeha!</div>
+		</div>
+	
+		<script>
+			var obj = document.getElementById("out1");
+			obj.innerHTML = "AAAAAAAAAAAAAA";
+			obj.setAttribute("style","color:red;");
+			obj.setAttribute("onclick","alert('asdfasdfasdfa');");
+			obj2 = document.createElement("hr");
+			obj.appendChild(obj2);
+			var obj3 = document.createElement("ul");
+			document.body.appendChild(obj3);
+			var li1 = document.createElement("li");
+			obj3.appendChild(li1);
+			li1.appendChild(document.createTextNode("listitem1"));
+			var li2=document.createElement("li");
+			obj3.appendChild(li2);
+			li2.appendChild(document.createTextNode("listitem2"));
+			var li3=document.createElement("li");
+			obj3.appendChild(li3);
+			li3.appendChild(document.createTextNode("listitem3"));
+			var li4=document.createElement("li");
+			obj3.appendChild(li4);
+			li4.appendChild(document.createTextNode("listitem4"));
+			var li5=document.createElement("li");
+			obj3.appendChild(li5);
+			li5.innerHTML="listitem5";
+			
+			//add an ordered list with 5 list items to the body. The list items should be animals
+			var ol = document.createElement("ol");
+			document.body.appendChild(ol);
+			createListItem("dog");
+			createListItem("cat");
+			createListItem("Fish");
+			createListItem("Rat");
+			createListItem("Bat");
+			
+			function createListItem(s) {
+				var li = document.createElement("li");
+				li.innerHTML = s;
+				ol.appendChild(li);
+			}
+			
+			//zebra stripe ul 
+
+			for(var i = 0; i < obj3.childNodes.length; i+=2) {
+				obj3.childNodes[i].style.backgroundColor="lightgray"; 
+			}
+			
+			//make the animation go from lower left to upper right, make the red box start from lower left
+			function myMove() {
+				var elem = document.getElementById("animate"); 
+				var pos = 350;
+				var pos2 = 0;
+				var id = setInterval(frame, 5);
+				function frame() {
+					if (pos == 0) {
+						clearInterval(id);
+					} else {
+						pos--; 
+						pos2++;
+						elem.style.top = pos + 'px'; 
+						elem.style.left = pos2 + 'px'; 
+					}
+				}
+			}
+			
+		</script>
+		
+	</body>
+</body>

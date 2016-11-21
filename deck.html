@@ -1,0 +1,34 @@
+<DOCTYPE!html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				
+				$("#length, #width, #bw, #bl").keyup(function() {
+					 l = $("#length").val();
+					 w = $("#width").val();
+					 bl = $("#bl").val();
+					 bw = $("#bw").val();
+					area= l*w; 
+					boardlength = bl*bw;
+					boards = area / boardlength;
+					document.getElementById("board").innerHTML = boards;
+					});
+				});
+			
+		</script>
+	</head>
+	<body>
+			<h1>Calculate materials for deck</h1>
+			<form>
+				<label>length</label><input type="text" id="length" />
+				<label>width</label><input type="text" id="width" />
+				<!--assume boards are 8x1 feet-->
+				<br />
+				<label>board width</label><input type="text" id="bl" />
+				<label>board width</label><input type="text" id="bw" />
+				<p><span id="board">_<span></p>
+			</form>
+	</body>
+</html>

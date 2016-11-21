@@ -1,0 +1,105 @@
+<DOCTYPE!html>
+<!-- File Name:    project2.html
+	 Author   :    Alissa Myers
+	 Class    :    CIS 255
+	 Note	  :    Javascript in document project2.js -> link at the end of document
+-->
+<!-- course planner program for cis255 
+	internal: all courses needed for student [A]
+	upper left (courses taken) [T]
+	upper right (courses needed not already taken) [N = A - T]
+	internal: all SVSU cs/cis courses [S]
+	lower left: courses available to take winter 2017 [C]
+	lower right: courses not available winter 2017 [S - C]
+-->
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+		<script src="JSONp1.js"></script>
+		
+		<script src="JSONp2.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="project2.css" />
+	</head>
+	<body>
+		
+		<!--div container start-->
+		<div class="container">
+		
+			<h1>Course Planner</h1>
+			
+			<!--buttons to select a major-->
+			<p>Please Select a Major: </p>
+				<form>
+					<input type="button" onclick="CSList();" value="CS" />
+					<input type="button" onclick="CISList();" value="CIS" />
+				</form>
+				
+			<!--div start new row-->
+			<div class="row">
+				<!--div start for courses taken section-->
+				<div class="col-lg-6" id="taken">
+					<form>
+						<h2>Courses Taken</h2>
+						<p>Enter courses separated by a comma (ex:CIS 255, CS333)</p>
+						<textarea id="takenInput" > </textarea>
+						<br>
+						<input type="button" id="submitTaken" onclick="getTaken();"value="Click" />
+					</form>
+				</div>
+				<!--div courses taken end-->
+				
+				<!--div courses needed start -->
+				<div class="col-lg-6" id="needed">
+					<h2>Courses Needed</h2>
+					<p>Click button after entering courses taken</p>
+					<form>
+						<textarea id="out1" ></textarea>
+						<br>
+						<input type="button" id="getNeeded" onClick="showNeeded();" value="Show Needed Courses" />
+				</div>
+				<!-- div courses needed end-->
+				
+			</div>
+			<!--div row end-->
+			
+			<!--div new row start-->
+			<div class="row">
+			
+				<!--div for available classes start-->
+				<div class="col-lg-6" id="available">
+					<h2>Available Courses for Winter 2017</h2>
+					<form>
+						<textarea id="out2"></textarea>
+						<br />
+						<input type="button" id="showAvailable" value="Show Available" onClick="goodStuff(); " />
+					</form>
+				</div>
+				<!--div for available classes end-->
+				
+				<!--div for unavailable classes start-->
+				<div class="col-lg-6" id="unavailable">
+					<h2>Unavailable Courses</h2>
+					<form>
+						<textarea id="out3"></textarea>
+					</form>
+				</div>
+				<!--div for unavailable classes end-->
+				
+			</div>
+			<!--div row end-->
+			
+		<div>
+		<!--div container end-->
+		
+		<script src="project2.js"></script>
+	</body>
+</html>
